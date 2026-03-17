@@ -2,73 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Birthday Big Sis 🎉</title>
+  <title>Happy Birthday!</title>
   <style>
     body {
-      background-color: #fff0f6;
-      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
       text-align: center;
-      color: #6a1b9a;
-      overflow: hidden;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
     }
-    .message {
-      margin-top: 20px;
-      font-size: 22px;
+
+    h1 {
+      font-size: 3em;
+      animation: colorchange 5s infinite;
     }
+
+    @keyframes colorchange {
+      0% { color: red; }
+      25% { color: blue; }
+      50% { color: green; }
+      75% { color: purple; }
+      100% { color: orange; }
+    }
+
     .cake {
-      font-size: 18px;
-      line-height: 1.4;
-      white-space: pre;
-      color: #d32f2f;
-      margin-top: 30px;
+      margin: 50px auto;
+      width: 200px;
+      position: relative;
     }
-    .balloon {
-      position: absolute;
-      bottom: -150px;
-      width: 50px;
-      height: 70px;
+
+    .tier {
+      width: 100%;
+      height: 80px;
       background: pink;
+      border-radius: 10px;
+      margin: auto;
+      position: relative;
+      animation: bounce 2s infinite;
+    }
+
+    .tier:nth-child(2) {
+      width: 150px;
+      background: lightblue;
+      margin-top: -40px;
+    }
+
+    .tier:nth-child(3) {
+      width: 100px;
+      background: lightgreen;
+      margin-top: -40px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .candle {
+      width: 10px;
+      height: 30px;
+      background: yellow;
+      margin: auto;
+      position: relative;
+      top: -20px;
+    }
+
+    .flame {
+      width: 15px;
+      height: 15px;
+      background: orange;
       border-radius: 50%;
-      animation: floatUp 10s infinite ease-in;
-    }
-    .balloon::after {
-      content: "";
       position: absolute;
-      bottom: -20px;
-      left: 50%;
-      width: 2px;
-      height: 20px;
-      background: black;
+      top: -15px;
+      left: -2px;
+      animation: flicker 0.3s infinite;
     }
-    @keyframes floatUp {
-      0% { transform: translateY(0); opacity: 1; }
-      100% { transform: translateY(-120vh); opacity: 0; }
+
+    @keyframes flicker {
+      0% { transform: scale(1); background: orange; }
+      50% { transform: scale(1.2); background: gold; }
+      100% { transform: scale(1); background: orange; }
     }
   </style>
 </head>
 <body>
-  <h1>🎂 Happy Birthday, Big Sis! 🎂</h1>
-  <div class="message">
-    To my amazing big sis,<br>
-    You are my role model, my protector, and my best friend.<br>
-    May your day be filled with love, laughter, and endless joy!<br>
-    I’m so lucky to have you in my life. 💖
-  </div>
+  <h1>🎉 Happy Birthday Big Sis! 🎂</h1>
   <div class="cake">
-         i i i i i i i i i i i i i i i i i<br>
-        |:H:a:p:p:y: :B:i:r:t:h:d:a:y: :S:i:s:|<br>
-      __|___________________________________|__<br>
-     |^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^|<br>
-     |                                       |<br>
-     |                🎂🎂🎂                 |<br>
-     |_______________________________________|
+    <div class="tier"></div>
+    <div class="tier"></div>
+    <div class="tier"></div>
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
   </div>
-
-  <!-- Balloons -->
-  <div class="balloon" style="left:10%; background:lightblue;"></div>
-  <div class="balloon" style="left:30%; background:pink;"></div>
-  <div class="balloon" style="left:50%; background:yellow;"></div>
-  <div class="balloon" style="left:70%; background:purple;"></div>
-  <div class="balloon" style="left:90%; background:orange;"></div>
+  <h2 style="color: magenta;">Wishing you joy & laughter!</h2>
+  <h2 style="color: teal;">May your dreams come true!</h2>
+  <h2 style="color: gold;">Stay blessed always!</h2>
 </body>
 </html>
