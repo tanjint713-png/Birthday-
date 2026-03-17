@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Birthday!</title>
+  <title>Happy Birthday Big Sis 🎉</title>
   <style>
     body {
       background: linear-gradient(to right, #ffe0f0, #fff5cc);
@@ -100,7 +100,7 @@
     .balloon {
       width: 40px;
       height: 60px;
-      border-radius: 50% 50% 50% 50%;
+      border-radius: 50%;
       position: absolute;
       bottom: -100px;
       animation: float 10s infinite;
@@ -118,4 +118,37 @@
 
     @keyframes float {
       0% { transform: translateY(0); }
-      100% { transform: translate
+      100% { transform: translateY(-800px); }
+    }
+
+    .balloon.red { background: red; left: 10%; animation-delay: 0s; }
+    .balloon.blue { background: blue; left: 30%; animation-delay: 2s; }
+    .balloon.green { background: green; left: 50%; animation-delay: 4s; }
+    .balloon.purple { background: purple; left: 70%; animation-delay: 6s; }
+    .balloon.orange { background: orange; left: 90%; animation-delay: 8s; }
+  </style>
+</head>
+<body>
+  <h1>🎉 Happy Birthday Big Sis! 🎂</h1>
+  <div class="cake">
+    <div class="tier bottom"></div>
+    <div class="tier middle"></div>
+    <div class="tier top"></div>
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+  </div>
+  <div class="wishes">
+    <h2>🌸 Wishing you endless joy & laughter!</h2>
+    <h2>💫 May all your dreams come true!</h2>
+    <h2>🌟 Stay blessed and shine always!</h2>
+  </div>
+
+  <!-- Floating balloons -->
+  <div class="balloon red"></div>
+  <div class="balloon blue"></div>
+  <div class="balloon green"></div>
+  <div class="balloon purple"></div>
+  <div class="balloon orange"></div>
+</body>
+</html>
