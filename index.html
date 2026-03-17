@@ -8,7 +8,7 @@
       background: linear-gradient(to right, #ffe0f0, #fff5cc);
       text-align: center;
       font-family: 'Comic Sans MS', cursive, sans-serif;
-      overflow-x: hidden;
+      overflow: hidden;
     }
 
     h1 {
@@ -25,6 +25,7 @@
       100% { color: orange; }
     }
 
+    /* Cake */
     .cake {
       margin: 40px auto;
       position: relative;
@@ -38,26 +39,16 @@
       animation: bounce 2s infinite;
     }
 
-    .tier.bottom {
-      width: 220px;
-      background: pink;
-    }
-
-    .tier.middle {
-      width: 160px;
-      background: lightblue;
-    }
-
-    .tier.top {
-      width: 100px;
-      background: lightgreen;
-    }
+    .tier.bottom { width: 220px; background: pink; }
+    .tier.middle { width: 160px; background: lightblue; }
+    .tier.top { width: 100px; background: lightgreen; }
 
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-8px); }
     }
 
+    /* Candle */
     .candle {
       width: 12px;
       height: 40px;
@@ -84,6 +75,7 @@
       100% { transform: scale(1); background: orange; }
     }
 
+    /* Wishes */
     .wishes {
       margin-top: 30px;
     }
@@ -103,22 +95,27 @@
       50% { opacity: 1; }
       100% { opacity: 0.3; }
     }
-  </style>
-</head>
-<body>
-  <h1>🎉 Happy Birthday Big Sis! 🎂</h1>
-  <div class="cake">
-    <div class="tier bottom"></div>
-    <div class="tier middle"></div>
-    <div class="tier top"></div>
-    <div class="candle">
-      <div class="flame"></div>
-    </div>
-  </div>
-  <div class="wishes">
-    <h2>🌸 Wishing you endless joy & laughter!</h2>
-    <h2>💫 May all your dreams come true!</h2>
-    <h2>🌟 Stay blessed and shine always!</h2>
-  </div>
-</body>
-</html>
+
+    /* Balloons */
+    .balloon {
+      width: 40px;
+      height: 60px;
+      border-radius: 50% 50% 50% 50%;
+      position: absolute;
+      bottom: -100px;
+      animation: float 10s infinite;
+    }
+
+    .balloon::after {
+      content: "";
+      width: 2px;
+      height: 50px;
+      background: black;
+      position: absolute;
+      top: 60px;
+      left: 19px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translate
