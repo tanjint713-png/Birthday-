@@ -72,6 +72,15 @@
     position: absolute;
     bottom: -60px;
     animation: floatUp 8s linear forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .string {
+    width: 2px;
+    height: 30px;
+    background: black;
+    margin-top: -5px;
   }
 
   @keyframes floatUp {
@@ -104,6 +113,12 @@
       balloon.classList.add('balloon');
       balloon.style.left = Math.random() * window.innerWidth + 'px';
       balloon.style.background = ['red','blue','green','purple','orange','pink'][Math.floor(Math.random()*6)];
+
+      // Add string
+      const string = document.createElement('div');
+      string.classList.add('string');
+      balloon.appendChild(string);
+
       document.body.appendChild(balloon);
 
       setTimeout(() => {
