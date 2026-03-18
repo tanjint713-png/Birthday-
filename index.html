@@ -19,9 +19,10 @@
     margin-top: 20px;
   }
 
+  /* Cake */
   .cake {
     margin: 40px auto;
-    width: 150px;
+    width: 160px;
     position: relative;
   }
   .layer {
@@ -34,7 +35,7 @@
   .blue { background: #87ceeb; }
   .green { background: #90ee90; }
   .candle {
-    width: 10px;
+    width: 12px;
     height: 40px;
     background: #ffd700;
     margin: 0 auto;
@@ -47,7 +48,7 @@
     border-radius: 50%;
     position: absolute;
     top: -20px;
-    left: -5px;
+    left: -4px;
     animation: flicker 0.3s infinite alternate;
   }
   @keyframes flicker {
@@ -55,20 +56,21 @@
     to { transform: scale(1.2); opacity: 0.7; }
   }
 
+  /* Messages */
   .message {
     font-size: 1.2em;
     margin: 10px;
     color: #333;
   }
 
+  /* Balloons */
   .balloon {
     width: 40px;
     height: 50px;
-    background: red;
-    border-radius: 50% 50% 50% 50%;
+    border-radius: 50%;
     position: absolute;
     bottom: -60px;
-    animation: floatUp 6s linear infinite, pop 0.3s ease forwards;
+    animation: floatUp 8s linear forwards;
   }
   .string {
     width: 2px;
@@ -79,13 +81,7 @@
 
   @keyframes floatUp {
     0% { bottom: -60px; opacity: 1; }
-    80% { bottom: 100%; opacity: 1; }
-    100% { bottom: 100%; opacity: 0; }
-  }
-
-  @keyframes pop {
-    90% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(1.5); opacity: 0; }
+    100% { bottom: 110%; opacity: 0; }
   }
 </style>
 </head>
@@ -115,10 +111,11 @@
 
       setTimeout(() => {
         balloon.remove();
-      }, 6000);
+      }, 8000);
     }
 
-    setInterval(createBalloon, 800);
+    // Keep balloons floating upward continuously
+    setInterval(createBalloon, 700);
   </script>
 </body>
 </html>
