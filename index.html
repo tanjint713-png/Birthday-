@@ -34,6 +34,7 @@
   .pink { background: #ff69b4; }
   .blue { background: #87ceeb; }
   .green { background: #90ee90; }
+
   .candle {
     width: 12px;
     height: 40px;
@@ -72,12 +73,6 @@
     bottom: -60px;
     animation: floatUp 8s linear forwards;
   }
-  .string {
-    width: 2px;
-    height: 30px;
-    background: black;
-    margin: 0 auto;
-  }
 
   @keyframes floatUp {
     0% { bottom: -60px; opacity: 1; }
@@ -89,12 +84,14 @@
   <h1>🎉 Happy Birthday Big Sis! 🎂</h1>
 
   <div class="cake">
-    <div class="layer pink"></div>
-    <div class="layer blue"></div>
-    <div class="layer green"></div>
+    <!-- Candle on top -->
     <div class="candle">
       <div class="flame"></div>
     </div>
+    <!-- Cake layers -->
+    <div class="layer pink"></div>
+    <div class="layer blue"></div>
+    <div class="layer green"></div>
   </div>
 
   <div class="message">🌸 Thank you for being my eldest sister — my guide, my protector, my friend.</div>
